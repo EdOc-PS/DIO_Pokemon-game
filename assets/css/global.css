@@ -1,0 +1,48 @@
+@font-face{
+    font-family: Pokemon;
+    src: url("../fonts/pokemon-firered-leafgreen-font-recreation.ttf");
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Pokemon;
+    color: #333A45;
+}
+body{
+    cursor: url("../img/Charmander.cur"), default;
+}
+
+main{
+    position: relative;
+    z-index: 2;
+    display: flex;
+    height: 100vh;
+}
+.container-video{
+    position: absolute;
+    z-index: -1;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    left: 0;
+}
+.container-video::after{
+    content: "";
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top:0;
+    left: 0;
+    background: linear-gradient(
+        90deg, 
+        rgba(0,0,0,.95) 0%,
+        rgba(0,0,0,.7) 50%,
+        rgba(0,0,0,1) 90%
+    );
+}
+.container-video video{
+    height: 100vh;
+ 
+}
